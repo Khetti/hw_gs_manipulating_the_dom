@@ -7,52 +7,66 @@
     <script src="js/app.js"></script>
   </head>
   <body>
-
     <form id="new-unit-form">
-      <div class="form-wrapper">
-        <div class="form-item">
-          <label for="allegiance" class="primary">Allegiance</label>
-          <select id="allegiance">
-            <option value="" disable selected></option>
-            <option value="khorne">Khorne</option>
-            <option value="nurgle">Nurgle</option>
-            <option value="slaanesh">Slaanesh</option>
-            <option value="tzeentch">Tzeentch</option>
-            <option value="undivided">Chaos Undivided</option>
-          </select>
-        </div>
 
-        <div class="form-item">
+      <div class="form-wrapper">
+
+        <div class="form-role">
           <label for="role" class="primary">Unit Role</label>
           <select id="role">
             <option value="" disable selected></option>
-            <option value="hq">HQ</option>
-            <option value="troops">Troops</option>
-            <option value="elites">Elites</option>
-            <option value="fast-attack">Fast Attack</option>
-            <option value="heavy-support">Heavy Support</option>
-            <option value="lord-of-war">Lord of War</option>
+            <option value="HQ">HQ</option>
+            <option value="Troops">Troops</option>
+            <option value="Elites">Elites</option>
+            <option value="Fast Attack">Fast Attack</option>
+            <option value="Heavy Support">Heavy Support</option>
+            <option value="Lord of War">Lord of War</option>
           </select>
         </div>
 
-        <div class="form-item">
+        <div class="form-allegiance">
+          <label for="allegiance" class="primary">Allegiance</label>
+          <select id="allegiance">
+            <option value="" disable selected></option>
+            <option value="Khorne">Khorne</option>
+            <option value="Nurgle">Nurgle</option>
+            <option value="Slaanesh">Slaanesh</option>
+            <option value="Tzeentch">Tzeentch</option>
+            <option value="Undivided">Chaos Undivided</option>
+          </select>
+        </div>
+
+        <div class="form-name">
           <label for="name" class="primary">Name: </label>
           <input type="text" id="name" required/>
         </div>
 
-        <div class="form-item">
+        <div class="form-size">
           <label for="size" class="primary">No. of Models: </label>
           <input type="number" id="size" required/>
         </div>
 
-        <div class="form-item">
+        <div class="form-points">
           <label for="points" class="primary">Points Cost: </label>
           <input type="number" id="points" required/>
         </div>
+
+        <p>How's the hobby progress going?</p>
+        <div class="form-assembly">
+          <label for="assembly-status" class="primary">Assembled? </label>
+          <input type="checkbox" id="assembly-status">
+        </div>
+
+        <div class="form-paint">
+          <label for="paint-status" class="primary">Painted? </label>
+          <input type="checkbox" id="paint-status">
+        </div>
+
       </div>
       <input type="submit" value="Save"/>
     </form>
 
     <h1>My Toy Soldiers</h1>
+    <ul id="army-list"></ul>
   </body>
 </html>
